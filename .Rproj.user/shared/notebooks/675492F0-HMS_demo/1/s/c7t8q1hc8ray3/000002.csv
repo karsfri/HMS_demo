@@ -1,0 +1,9 @@
+"0","readxl::read_excel(
+  ""Útlán heimila_með veð í húsnæði_verðtr_óverðtr.xlsx"",
+  sheet = ""Raunverð"",
+  range = ""AU2:AX122""
+)
+"
+"2","New names:
+* `` -> ...1
+"

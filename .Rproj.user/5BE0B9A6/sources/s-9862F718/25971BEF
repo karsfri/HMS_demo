@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580984421634.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "198513105",
+    "id" : "25971BEF",
+    "lastKnownWriteTime" : 1582127096,
+    "last_content_update" : 1582127096019,
+    "path" : "~/GitHub/HMS_demo/HMS_demo.Rmd",
+    "project_path" : "HMS_demo.Rmd",
+    "properties" : {
+        "cursorPosition" : "8,17",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

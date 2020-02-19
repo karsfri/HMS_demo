@@ -1,0 +1,153 @@
+---
+title: "Untitled"
+author: "Kári"
+date: "2/19/2020"
+output: html_document:
+---
+
+```{r}
+# install.packages("tidyverse")
+library(tidyverse)
+```
+
+
+# Þetta er fyrirsögn
+
+## Þetta er undirfyrirstögn
+
+Hellingur af texta.
+
+$$ \int_{0}^{\infty} f(x) \hat{\beta}dx $$
+
+```{r, echo=FALSE}
+boxplot(mtcars$hp ~ mtcars$cyl)
+```
+
+```{r}
+mtcars <- as.tibble(mtcars)
+
+
+```
+
+Pípa ( %>% ) leyfir okkur að skrifa x %>% f() í stað f(x) eða x %>% f(Y) í stað f(x,y)
+
+y %>% f(x,.)
+
+```{r}
+mtcars %>% 
+  mutate(
+    mpg_cyl = mpg * cyl,
+    bull = mpg_cyl * 2,
+    disp = log(disp)
+  ) 
+```
+
+```{r}
+mtcars %>% 
+  filter(
+    mpg > 20  | mpg < 10
+    ) %>%
+  group_by(gear, vs) %>%
+  summarise(
+    hp =  mean(hp)
+  ) %>% 
+  spread(vs, hp) 
+
+mtcarss2 <- filter(mtcars,mpg > 20  | mpg < 10)
+
+```
+
+```{r}
+mtcars 
+```
+
+```{r}
+install.packages("devtools")
+library(remotes)
+install_github("karsfri/HMSr")
+
+library(HMSr)
+
+```
+
+```{r}
+theme_set_hms()
+
+mtcars %>% 
+  ggplot(aes(as.factor(cyl), hp, fill = as.factor(cyl))) +
+  ggplot2::geom_boxplot(fill = NA, orientation = "x") +
+  labs(
+    title = "Mjög skrýtið plott",
+    subtitle = "Hvað villl Þorsteinn lesa út úr þessu" %>% str_wrap(20),
+    caption = cap_hms_hagstofa,
+    x = NULL,
+    y = NULL
+  ) +
+  scale_y_continuous(labels = label_isl())
+
+```
+
+```{r}
+df <- get_vnv()
+
+df %>% 
+  filter(timi > lubriyear(2018)) %>% 
+  ggplot(aes(timi,vnv)) +
+  geom_line() +
+  scale_y_log10() +
+  scale_x_date( labels = scales::label_date_short())
+```
+
+```{r}
+df <- get_visitala_launa()
+
+df %>% 
+  cpi_adjust(vars(Gildi), timi, at_date = lubriyear(2012, "Júní")) %>%
+  ggplot(aes(timi, Gildi)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, NA)) +
+  coord_flip() +
+  theme_hms()
+
+ggsave_both("visitala_launa", width = width_wide, height = height_full)
+```
+
+```{r}
+con <- get_connection_windows()
+
+```
+
+
+```{sql, connection = con, output.var=df_sql}
+SELECT [Dim_Timi_Byggingarar]
+      ,[Dim_Timi_Snapshot]
+      ,[Dim_Timi_Brunabotamat]
+      ,[Dim_Fasteignir]
+      ,[Flatarmal]
+      ,[Rummal]
+      ,[FjoldiHerbergja]
+      ,[Brunabotamat]
+      ,[Brunabotamat_I]
+      ,[VisitalaBrunabotamats]
+      ,[Endurstofnverd]
+      ,[Endurstofnverd_Afskrifad]
+      ,[Husmat]
+      ,[Lodarmat]
+      ,[Husmat_Fyrirhugad]
+      ,[Lodarmat_Fyrirhugad]
+  FROM [HgrDwh].[dwh].[Fact_Fasteignir_vw]
+```
+
+```{r}
+df_sql
+```
+
+```{r}
+visitolur <- tbl(con, dbplyr::in_schema("dwh", "Fact_Visitolur"))
+
+visitolur %>% 
+  filter(Landssvaedi == "Allt Landið") 
+
+```
+
+

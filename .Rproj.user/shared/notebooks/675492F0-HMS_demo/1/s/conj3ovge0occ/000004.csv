@@ -1,0 +1,15 @@
+"0","read_csv2(
+  ""MAN10001.csv"",
+  locale = locale(encoding = ""WINDOWS-1252"")
+  )
+"
+"2","Using ',' as decimal and '.' as grouping mark. Use read_delim() for more control.
+"
+"2","Parsed with column specification:
+cols(
+  Ársfjórðungur = [31mcol_character()[39m,
+  Sveitarfélag = [31mcol_character()[39m,
+  `Kyn og ríkisfang` = [31mcol_character()[39m,
+  `Mannfjöldi eftir sveitarfélögum, kyni, ríkisfangi og ársfjórðungum` = [31mcol_character()[39m
+)
+"

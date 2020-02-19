@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Kári"
+date: "2/19/2020"
+output: html_document
+---
+
+# Þetta er fyrirsögn
+
+## Þetta er undirfyrirstögn
+
+Hellingur af texta.
+
+$$ \int_{0}^{\infty} f(x) \hat{\beta}dx $$
+
+```{r, echo=FALSE}
+mtcars
+```
+
