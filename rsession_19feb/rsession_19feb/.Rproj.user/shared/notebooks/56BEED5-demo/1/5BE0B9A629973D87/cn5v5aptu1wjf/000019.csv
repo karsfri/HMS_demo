@@ -1,9 +1,0 @@
-"0","df %>% 
-  cpi_adjust(vars(Gildi), timi, at_date = lubriyear(2012, ""Júní"")) %>%
-  ggplot(aes(timi, Gildi)) +
-  geom_line() +
-  scale_y_continuous(limits = c(0, NA)) +
-  coord_flip()
-"
-"2","Selected columns set at 2012-06-01 price levels
-"

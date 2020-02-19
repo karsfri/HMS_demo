@@ -13,92 +13,13 @@
 "0",""
 "0","# Fer yfir pakkanna seinna!"
 "0","library(HMSr)        # Pakkinn okkar"
-"2","Registered S3 method overwritten by 'dplyr':
-  method           from
-  print.rowwise_df     
-"
-"2","replacing previous import ‘dplyr::collapse’ by ‘glue::collapse’ when loading ‘HMSr’"
-"2","replacing previous import ‘dplyr::intersect’ by ‘lubridate::intersect’ when loading ‘HMSr’"
-"2","replacing previous import ‘dplyr::union’ by ‘lubridate::union’ when loading ‘HMSr’"
-"2","replacing previous import ‘dplyr::setdiff’ by ‘lubridate::setdiff’ when loading ‘HMSr’"
-"2","Registered S3 methods overwritten by 'dbplyr':
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-"
 "0","library(DBI)         # Pakki til aÃ° tengjast viÃ° gagnagrunninn"
-"2","package ‘DBI’ was built under R version 3.6.2"
 "0","library(tidyverse)   # Pakkinn sem breytti Ã¾vÃ­ hvernig R er notaÃ°"
-"2","[30m-- [1mAttaching packages[22m --------------------------------------- tidyverse 1.3.0 --[39m
-"
-"2","[30m[32mv[30m [34mggplot2[30m 3.3.0.[31m9000[30m     [32mv[30m [34mpurrr  [30m 0.3.3     
-[32mv[30m [34mtibble [30m 2.1.3          [32mv[30m [34mdplyr  [30m 0.8.3     
-[32mv[30m [34mtidyr  [30m 1.0.0          [32mv[30m [34mstringr[30m 1.4.0     
-[32mv[30m [34mreadr  [30m 1.3.1          [32mv[30m [34mforcats[30m 0.4.0     [39m
-"
-"2","[30m-- [1mConflicts[22m ------------------------------------------ tidyverse_conflicts() --
-[31mx[30m [34mdplyr[30m::[32mfilter()[30m masks [34mstats[30m::filter()
-[31mx[30m [34mdplyr[30m::[32mlag()[30m    masks [34mstats[30m::lag()[39m
-"
 "0","library(sf)"
-"2","Linking to GEOS 3.6.1, GDAL 2.2.3, PROJ 4.9.3
-"
 "0","library(seasonal)"
-"2","
-Attaching package: ‘seasonal’
-
-"
-"2","The following object is masked from ‘package:tibble’:
-
-    view
-
-"
 "0","library(tsibble)"
-"2","
-Attaching package: ‘tsibble’
-
-"
-"2","The following object is masked from ‘package:dplyr’:
-
-    id
-
-"
 "0","library(lubridate)"
-"2","
-Attaching package: ‘lubridate’
-
-"
-"2","The following objects are masked from ‘package:tsibble’:
-
-    interval, new_interval
-
-"
-"2","The following object is masked from ‘package:base’:
-
-    date
-
-"
 "0","library(here)        # Pakki "
-"2","here() starts at C:/Users/Kari.S/Documents/GitHub/HMS_demo
-"
-"2","
-Attaching package: ‘here’
-
-"
-"2","The following object is masked from ‘package:lubridate’:
-
-    here
-
-"
 "0","library(dbplyr)      # Tidyverse fyrir gagnagrunna"
-"2","
-Attaching package: ‘dbplyr’
-
-"
-"2","The following objects are masked from ‘package:dplyr’:
-
-    ident, sql
-
-"
 "0","library(ggseas)      # Seasonal adjustment - X13Arima"
 "0",""

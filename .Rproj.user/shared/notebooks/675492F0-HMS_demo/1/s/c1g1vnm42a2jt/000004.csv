@@ -1,0 +1,8 @@
+"0","fasteignir %>% 
+  mutate(
+    Dim_Timi_Utgefid = Dim_Timi_Utgefid %>% ymd(),
+    Dim_Timi_Thinglyst = Dim_Timi_Thinglyst %>% ymd()
+  )
+"
+"2","Error in eval(lhs, parent, parent) : object 'Dim_Timi_Utgefid' not found
+"

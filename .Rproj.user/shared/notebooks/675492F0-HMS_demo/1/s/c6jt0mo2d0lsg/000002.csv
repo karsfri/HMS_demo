@@ -1,2 +1,4 @@
-"0","# Ég kommenta út fallið svo ég keyri það ekki óvart"
-"0","# install.packages(""here"")"
+"0","slod <- ""G:\Hagdeild\Manadarskyrsla_Hagdeildar\2019\November\Byggingamarkadur""    # virkar ekki
+"
+"2","Error: '\H' is an unrecognized escape in character string starting """"G:\H""
+"
